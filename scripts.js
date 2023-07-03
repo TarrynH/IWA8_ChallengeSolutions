@@ -15,9 +15,9 @@ const sarahPostal = '0310'
 
 const leo = {
 	name: leoName,
+    age: 24,
+    "access-id": "47afb389-8014-4d0b-aff3-e40203d2107f",
 	balance: leoBalance*-1,
-	accessId: "47afb389-8014-4d0b-aff3-e40203d2107f",
-	age: 24,
 	address: {
 		number: leoNumber,
 		street: leoStreet,
@@ -28,13 +28,13 @@ const leo = {
 const sarah = {
 	name: sarahName.trim() + " " + sarahSurname,
 	age: 62,
-	accessId: "6b279ae5-5657-4240-80e9-23f6b635f7a8",
+	"access-id": "6b279ae5-5657-4240-80e9-23f6b635f7a8",
 	balance: sarahBalance*-1,
 	address: {
 		number: sarahNumber,
 		street: sarahStreet,
-		postalCode: sarahPostal
+		"postal-code": sarahPostal
 	}
 }
-console.log(leo, leo.address.postalCode)
-console.log(sarah, sarah.address.postalCode)
+console.log(leo, leo.address.postalCode)   // change postal-code to postalCode
+console.log(sarah, sarah.address["postal-code"])  // change postal-code to "postal-code"  both of these display the same relevant value in the console
